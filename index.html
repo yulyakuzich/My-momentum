@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="assets/favicon.ico" rel="shortcut icon" />
+  <link rel="stylesheet" href="css/owfont-regular.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>momentum</title>
+</head>
+<body>
+  <header class="header">
+    <div id="show-audio" class="row">
+      <div class="player" >
+        <div class="player-controls">
+          <button class="play-prev player-icon"></button>
+          <button class="play player-icon"></button>
+          <button class="play-next player-icon"></button>
+        </div>
+        <ul class="play-list"></ul>
+      </div>
+      <div class="player-controls-main player-controls-main-hide">
+        <div class="slidecontainer">
+          <p class="play-name"></p>
+          <div class="row">
+            <p class="current-time">00:00</p>
+            <input type="range" min="1" max="100" value="0" class="slider" id="playProgress">
+            <p class="total-time">00:00</p>
+            <div class="row volume-control">
+              <img width="16" class="sound-button sound-button-active" id="unmute" src="./assets/svg/speaker.svg" alt="" srcset="">
+              <img width="16" class="sound-button" id="mute" src="./assets/svg/speaker-mute.svg" alt="" srcset="">
+              <input type="range" min="1" max="100" value="90" class="slider" id="volume">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="weather" id="show-forecast">
+        <input type="text" class="city pla" placeholder="your city" />
+        <i class="weather-icon owf"></i>
+        <div class="weather-error"></div>
+        <div class="description-container">
+          <span class="temperature"></span>
+          <span class="weather-description"></span>
+        </div>
+        <div class="wind"></div>
+        <div class="humidity"></div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <div class="slider-icons">
+      <button class="slide-prev slider-icon"></button>
+      <button class="slide-next slider-icon"></button>
+    </div>
+    <time class="time" id="show-time"></time>
+    <date class="date" id="show-date"></date>
+    <div class="greeting-container" id="show-greeting">
+      <span class="greeting"></span>
+      <input type="text" class="name" placeholder="your name" />
+    </div>
+  </main>
+  <footer class="footer">
+    <button class="change-quote"></button>
+    <div id="show-quote">
+      <div class="quote"></div>
+      <div class="author"></div>
+    </div>
+    <img src="assets/svg/settings.svg" alt="settings" class="settings-icon">
+    <div class="settings-container">
+      <img src="assets/svg/close.svg" alt="close" class="close-btn">
+      <div class="settings-header">
+        <h3 class="settings-general-title">Settings</h3>
+        <span class="settings-description">Customize your dashboard</span>
+      </div>
+      <div class="settings-inner">
+        <h4 class="settings-name">Languages</h4>
+        <ul>
+          <li class="settings-value settings-lang-value" id="en" data-language-name="en">en</li>
+          <li class="settings-value settings-lang-value" id="ru" data-language-name="ru">ru</li>
+        </ul>
+        <h4 class="settings-name">Show</h4>
+        <ul>
+          <li class="settings-value settings-show-value settings-value-selected" data-optiom-name="show-time">Time</li>
+          <li class="settings-value settings-show-value settings-value-selected" data-optiom-name="show-date">Date</li>
+          <li class="settings-value settings-show-value settings-value-selected" data-optiom-name="show-greeting">Greeting</li>
+          <li class="settings-value settings-show-value settings-value-selected" data-optiom-name="show-quote">Quote</li>
+          <li class="settings-value settings-show-value settings-value-selected" data-optiom-name="show-forecast">Forecast</li>
+          <li class="settings-value settings-show-value settings-value-selected" data-optiom-name="show-audio">Audio player</li>
+        </ul>
+        <h4 class="settings-name">Background images</h4>
+        <ul>
+          <li class="settings-value settings-img-value" data-img-source-name="gitHub">GitHub collection</li>
+          <li class="settings-value settings-img-value" data-img-source-name="unsplash">Unsplash collection</li>
+        </ul>
+        <input type="text" class="teg-img" placeholder="type of images">
+        <button class="save">Save</button>
+      </div>
+    </div>
+    <img src="assets/svg/list-check.svg" alt="list" class="list-icon">
+    <div class="to-do-container">
+      <img src="assets/svg/close.svg" alt="close" class="close-list-btn">
+      <div id="myDIV" class="to-do-header">
+
+        <h2 class="to-do-title">My To Do List</h2>
+        <input type="text" id="myInput" placeholder="Title...">
+        <span onclick="newElement()" class="addBtn">Add</span>
+      </div>
+      <div class="to-do-inner">
+        <ul id="myUL" class="ul">
+        </ul>
+      </div>
+    </div>
+    <div class="info">
+      <a href="https://github.com/yulyakuzich/" class="my-github">GitHub</a>
+      <p class="year-creating">2023</p>
+      <a href="https://rs.school/js/" class="my-github">RS School</a>
+    </div>
+  </footer>
+  <script src="js/playList.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
